@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Card Wrapping App with Sharing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .news-card {
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-header {
+            background: linear-gradient(90deg, #fef3c7, #fed7aa);
+            border-left: 4px solid #f59e0b;
+        }
+        .sharing-buttons {
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .news-card:hover .sharing-buttons {
+            opacity: 1;
+        }
+        .share-link {
+            font-size: 0.7rem;
+            background: #f3f4f6;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: monospace;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .share-link:hover {
+            background: #e5e7eb;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -70px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .metric-input {
+            width: 80px;
+            padding: 2px 6px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-900 mb-2">News Card Wrapping App</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Add news cards and automatically organize them into sections with 2, 3, or 4 cards each. Each card includes sharing functionality.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Panel: Add News Card Form -->
+            <div class="lg:col-span-1 bg-white rounded-xl shadow-lg p-6 h-fit">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-6" id="form-title">Add News Card</h2>
+                
+                <form id="news-form" class="space-y-4">
+                    <input type="hidden" id="edit-card-id" value="">
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                        <input type="text" id="title" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter news title" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                        <input type="url" id="image-url" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://example.com/image.jpg" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+                        <textarea id="content" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter news content" required></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Metric 1 (e.g., 50k)</label>
+                            <input type="text" id="metric1" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="50k" value="50k">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Metric 2 (e.g., 250%)</label>
+                            <input type="text" id="metric2" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="250%" value="250%">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Related Topics (comma separated)</label>
+                        <input type="text" id="topics" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Topic 1, Topic 2, Topic 3" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Read More Links (one per line)</label>
+                        <textarea id="links" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://example1.com&#10;https://example2.com"></textarea>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="keep-form-data" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        <label for="keep-form-data" class="ml-2 block text-sm text-gray-700">
+                            Keep form data after adding card
+                        </label>
+                    </div>
+                    
+                    <div class="flex justify-between items-center pt-4">
+                        <div class="flex space-x-2">
+                            <button type="submit" class="bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition-colors flex items-center">
+                                <i class="fas fa-plus mr-2"></i> <span id="submit-text">Add Card</span>
+                            </button>
+                            <button type="button" id="cancel-edit" class="bg-gray-300 text-gray-700 px-5 py-2.5 rounded-lg font-medium hover:bg-gray-400 transition-colors flex items-center hidden">
+                                <i class="fas fa-times mr-2"></i> Cancel
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm text-gray-600">Cards per section:</span>
+                            <select id="cards-per-section" class="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-500">
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Quick Add Examples</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="quick-add-btn bg-blue-100 text-blue-700 p-2 rounded text-sm hover:bg-blue-200 transition-colors" data-example="sports">Sports</button>
+                        <button class="quick-add-btn bg-green-100 text-green-700 p-2 rounded text-sm hover:bg-green-200 transition-colors" data-example="tech">Technology</button>
+                        <button class="quick-add-btn bg-purple-100 text-purple-700 p-2 rounded text-sm hover:bg-purple-200 transition-colors" data-example="health">Health</button>
+                        <button class="quick-add-btn bg-yellow-100 text-yellow-700 p-2 rounded text-sm hover:bg-yellow-200 transition-colors" data-example="entertainment">Entertainment</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Panel: Preview and Output -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold text-indigo-800">Preview</h2>
+                        <div class="flex space-x-2">
+                            <button id="clear-all" class="bg-red-100 text-red-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors">
+                                <i class="fas fa-trash mr-1"></i> Clear All
+                            </button>
+                            <button id="copy-code" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-200 transition-colors">
+                                <i class="fas fa-copy mr-1"></i> Copy HTML
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="preview-container" class="border-2 border-dashed border-gray-300 rounded-lg p-4 min-h-[400px]">
+                        <div class="text-center py-16 text-gray-500">
+                            <i class="fas fa-newspaper text-5xl mb-4 opacity-40"></i>
+                            <p class="text-lg">No news cards added yet.</p>
+                            <p class="text-sm mt-1">Add a card using the form to see the preview here.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-lg p-6 text-white">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold">Generated HTML Code</h2>
+                        <span id="card-count" class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">0 cards</span>
+                    </div>
+                    <pre id="code-output" class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm text-gray-300 max-h-60 overflow-y-auto">No cards added yet.</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sharing Modal -->
+    <div id="sharing-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl p-6 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-indigo-800">Share This News</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-lg font-semibold mb-2" id="share-title">News Title</h4>
+                <div class="flex items-center justify-between bg-gray-100 p-2 rounded-lg">
+                    <span id="share-url" class="text-sm truncate mr-2">URL will appear here</span>
+                    <button id="copy-share-url" class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-3">
+                <a href="#" class="share-platform bg-blue-600 text-white p-3 rounded-lg text-center hover:bg-blue-700 transition-colors" data-platform="facebook">
+                    <i class="fab fa-facebook-f mb-1"></i>
+                    <span class="block text-xs">Facebook</span>
+                </a>
+                <a href="#" class="share-platform bg-pink-600 text-white p-3 rounded-lg text-center hover:bg-pink-700 transition-colors" data-platform="instagram">
+                    <i class="fab fa-instagram mb-1"></i>
+                    <span class="block text-xs">Instagram</span>
+                </a>
+                <a href="#" class="share-platform bg-green-500 text-white p-3 rounded-lg text-center hover:bg-green-600 transition-colors" data-platform="whatsapp">
+                    <i class="fab fa-whatsapp mb-1"></i>
+                    <span class="block text-xs">WhatsApp</span>
+                </a>
+                <a href="#" class="share-platform bg-blue-400 text-white p-3 rounded-lg text-center hover:bg-blue-500 transition-colors" data-platform="twitter">
+                    <i class="fab fa-twitter mb-1"></i>
+                    <span class="block text-xs">Twitter</span>
+                </a>
+                <a href="#" class="share-platform bg-blue-700 text-white p-3 rounded-lg text-center hover:bg-blue-800 transition-colors" data-platform="linkedin">
+                    <i class="fab fa-linkedin-in mb-1"></i>
+                    <span class="block text-xs">LinkedIn</span>
+                </a>
+                <a href="#" class="share-platform bg-blue-500 text-white p-3 rounded-lg text-center hover:bg-blue-600 transition-colors" data-platform="telegram">
+                    <i class="fab fa-telegram-plane mb-1"></i>
+                    <span class="block text-xs">Telegram</span>
+                </a>
+            </div>
+            <div class="mt-4 text-center text-sm text-gray-600">
+                <p>Share this news with your friends and followers!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for quick add buttons
+        const examples = {
+            sports: {
+                title: "Premier League: Manchester City Wins Championship",
+                image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1293&q=80",
+                content: "Manchester City secured their fifth Premier League title in six years with a dominant 3-0 victory over Chelsea. The team displayed exceptional form throughout the season, breaking several records along the way.",
+                topics: "Soccer, Premier League, Manchester City",
+                links: "https://premierleague.com\nhttps://manchestercity.com",
+                metric1: "75k",
+                metric2: "300%"
+            },
+            tech: {
+                title: "Apple Unveils Revolutionary AR Glasses",
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+                content: "Apple's new AR glasses blend digital content with the real world seamlessly. The device features advanced sensors and a custom-designed chip for unparalleled performance in augmented reality applications.",
+                topics: "Technology, Apple, Augmented Reality",
+                links: "https://apple.com\nhttps://technews.com",
+                metric1: "100k",
+                metric2: "500%"
+            },
+            health: {
+                title: "Breakthrough in Alzheimer's Research",
+                image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+                content: "Scientists have identified a new protein that could slow the progression of Alzheimer's disease. Clinical trials show promising results with minimal side effects, offering hope to millions worldwide.",
+                topics: "Health, Alzheimer's, Medical Research",
+                links: "https://medicaljournal.com\nhttps://alz.org",
+                metric1: "25k",
+                metric2: "150%"
+            },
+            entertainment: {
+                title: "New Marvel Movie Breaks Box Office Records",
+                image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+                content: "The latest installment in the Marvel Cinematic Universe has grossed over $1 billion worldwide in its opening weekend. Critics praise the film's storytelling and visual effects.",
+                topics: "Movies, Marvel, Entertainment",
+                links: "https://marvel.com\nhttps://boxofficemojo.com",
+                metric1: "200k",
+                metric2: "800%"
+            }
+        };
+
+        // Store news cards
+        let newsCards = [];
+        let sectionCounter = 1;
+        let currentShareCard = null;
+        let isEditing = false;
+        let editingCardId = null;
+
+        // DOM elements
+        const newsForm = document.getElementById('news-form');
+        const previewContainer = document.getElementById('preview-container');
+        const codeOutput = document.getElementById('code-output');
+        const cardsPerSectionSelect = document.getElementById('cards-per-section');
+        const cardCount = document.getElementById('card-count');
+        const clearAllBtn = document.getElementById('clear-all');
+        const copyCodeBtn = document.getElementById('copy-code');
+        const quickAddBtns = document.querySelectorAll('.quick-add-btn');
+        const sharingModal = document.getElementById('sharing-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const shareTitle = document.getElementById('share-title');
+        const shareUrl = document.getElementById('share-url');
+        const copyShareUrlBtn = document.getElementById('copy-share-url');
+        const sharePlatforms = document.querySelectorAll('.share-platform');
+        const keepFormDataCheckbox = document.getElementById('keep-form-data');
+        const editCardIdInput = document.getElementById('edit-card-id');
+        const cancelEditBtn = document.getElementById('cancel-edit');
+        const formTitle = document.getElementById('form-title');
+        const submitText = document.getElementById('submit-text');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateOutput();
+            
+            // Add event listeners
+            newsForm.addEventListener('submit', handleFormSubmit);
+            cardsPerSectionSelect.addEventListener('change', updateOutput);
+            clearAllBtn.addEventListener('click', clearAllCards);
+            copyCodeBtn.addEventListener('click', copyCodeToClipboard);
+            closeModalBtn.addEventListener('click', closeSharingModal);
+            copyShareUrlBtn.addEventListener('click', copyShareUrl);
+            cancelEditBtn.addEventListener('click', cancelEdit);
+            
+            // Quick add buttons
+            quickAddBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const example = examples[this.dataset.example];
+                    document.getElementById('title').value = example.title;
+                    document.getElementById('image-url').value = example.image;
+                    document.getElementById('content').value = example.content;
+                    document.getElementById('topics').value = example.topics;
+                    document.getElementById('links').value = example.links;
+                    document.getElementById('metric1').value = example.metric1;
+                    document.getElementById('metric2').value = example.metric2;
+                });
+            });
+            
+            // Set up sharing platform links
+            sharePlatforms.forEach(platform => {
+                platform.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    shareOnPlatform(this.dataset.platform);
+                });
+            });
+            
+            // Close modal when clicking outside
+            sharingModal.addEventListener('click', function(e) {
+                if (e.target === sharingModal) {
+                    closeSharingModal();
+                }
+            });
+        });
+
+        // Handle form submission (add or edit)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            if (isEditing) {
+                updateNewsCard();
+            } else {
+                addNewsCard();
+            }
+        }
+
+        // Add a new news card
+        function addNewsCard() {
+            const title = document.getElementById('title').value;
+            const imageUrl = document.getElementById('image-url').value;
+            const content = document.getElementById('content').value;
+            const metric1 = document.getElementById('metric1').value;
+            const metric2 = document.getElementById('metric2').value;
+            const topics = document.getElementById('topics').value.split(',').map(topic => topic.trim());
+            const links = document.getElementById('links').value.split('\n').filter(link => link.trim() !== '');
+            
+            const newCard = {
+                id: Date.now(),
+                title,
+                imageUrl,
+                content,
+                metric1,
+                metric2,
+                topics,
+                links,
+                timestamp: new Date().toLocaleString(),
+                shareUrl: generateShareUrl(title)
+            };
+            
+            newsCards.push(newCard);
+            updateOutput();
+            
+            // Only reset the form if the checkbox is NOT checked
+            if (!keepFormDataCheckbox.checked) {
+                newsForm.reset();
+                // Reset metrics to default values
+                document.getElementById('metric1').value = '50k';
+                document.getElementById('metric2').value = '250%';
+            }
+            
+            // Show success message
+            showNotification('News card added successfully!', 'success');
+        }
+
+        // Update an existing news card
+        function updateNewsCard() {
+            const title = document.getElementById('title').value;
+            const imageUrl = document.getElementById('image-url').value;
+            const content = document.getElementById('content').value;
+            const metric1 = document.getElementById('metric1').value;
+            const metric2 = document.getElementById('metric2').value;
+            const topics = document.getElementById('topics').value.split(',').map(topic => topic.trim());
+            const links = document.getElementById('links').value.split('\n').filter(link => link.trim() !== '');
+            
+            const cardIndex = newsCards.findIndex(card => card.id === editingCardId);
+            if (cardIndex !== -1) {
+                newsCards[cardIndex] = {
+                    ...newsCards[cardIndex],
+                    title,
+                    imageUrl,
+                    content,
+                    metric1,
+                    metric2,
+                    topics,
+                    links,
+                    timestamp: new Date().toLocaleString()
+                };
+                
+                updateOutput();
+                cancelEdit();
+                showNotification('News card updated successfully!', 'success');
+            }
+        }
+
+        // Edit a news card
+        function editNewsCard(cardId) {
+            const card = newsCards.find(card => card.id === cardId);
+            if (!card) return;
+            
+            // Populate form with card data
+            document.getElementById('title').value = card.title;
+            document.getElementById('image-url').value = card.imageUrl;
+            document.getElementById('content').value = card.content;
+            document.getElementById('metric1').value = card.metric1;
+            document.getElementById('metric2').value = card.metric2;
+            document.getElementById('topics').value = card.topics.join(', ');
+            document.getElementById('links').value = card.links.join('\n');
+            editCardIdInput.value = card.id;
+            
+            // Change UI to edit mode
+            isEditing = true;
+            editingCardId = cardId;
+            formTitle.textContent = 'Edit News Card';
+            submitText.textContent = 'Update Card';
+            cancelEditBtn.classList.remove('hidden');
+        }
+
+        // Cancel edit mode
+        function cancelEdit() {
+            isEditing = false;
+            editingCardId = null;
+            editCardIdInput.value = '';
+            formTitle.textContent = 'Add News Card';
+            submitText.textContent = 'Add Card';
+            cancelEditBtn.classList.add('hidden');
+            newsForm.reset();
+            // Reset metrics to default values
+            document.getElementById('metric1').value = '50k';
+            document.getElementById('metric2').value = '250%';
+        }
+
+        // Generate a shareable URL for a news card
+        function generateShareUrl(title) {
+            // In a real app, this would generate a proper short URL
+            // For this demo, we'll create a simulated short URL
+            const baseUrl = window.location.href.split('?')[0];
+            const slug = title.toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)+/g, '');
+            return `${baseUrl}?news=${slug}-${Date.now().toString(36)}`;
+        }
+
+        // Update preview and code output
+        function updateOutput() {
+            const cardsPerSection = parseInt(cardsPerSectionSelect.value);
+            
+            // Update card count
+            cardCount.textContent = `${newsCards.length} card${newsCards.length !== 1 ? 's' : ''}`;
+            
+            // Generate HTML for preview
+            if (newsCards.length === 0) {
+                previewContainer.innerHTML = `
+                    <div class="text-center py-16 text-gray-500">
+                        <i class="fas fa-newspaper text-5xl mb-4 opacity-40"></i>
+                        <p class="text-lg">No news cards added yet.</p>
+                        <p class="text-sm mt-1">Add a card using the form to see the preview here.</p>
+                    </div>
+                `;
+                codeOutput.textContent = 'No cards added yet.';
+                return;
+            }
+            
+            // Group cards into sections
+            const sections = [];
+            for (let i = 0; i < newsCards.length; i += cardsPerSection) {
+                sections.push(newsCards.slice(i, i + cardsPerSection));
+            }
+            
+            // Generate preview HTML
+            let previewHTML = '';
+            sections.forEach((sectionCards, sectionIndex) => {
+                previewHTML += generateSectionHTML(sectionCards, sectionIndex + 1);
+            });
+            previewContainer.innerHTML = previewHTML;
+            
+            // Add event listeners to sharing buttons in preview
+            document.querySelectorAll('.share-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const cardId = parseInt(this.dataset.cardId);
+                    openSharingModal(cardId);
+                });
+            });
+            
+            // Add event listeners to edit buttons in preview
+            document.querySelectorAll('.edit-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const cardId = parseInt(this.dataset.cardId);
+                    editNewsCard(cardId);
+                });
+            });
+            
+            // Add event listeners to copy share link buttons
+            document.querySelectorAll('.copy-share-link').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const url = this.previousElementSibling.textContent;
+                    navigator.clipboard.writeText(url).then(() => {
+                        showNotification('Share link copied to clipboard!', 'success');
+                    });
+                });
+            });
+            
+            // Generate code output
+            let codeHTML = '';
+            sections.forEach((sectionCards, sectionIndex) => {
+                codeHTML += generateSectionCode(sectionCards, sectionIndex + 1);
+            });
+            codeOutput.textContent = codeHTML;
+        }
+
+        // Generate HTML for a section (for preview)
+        function generateSectionHTML(cards, sectionNumber) {
+            let cardsHTML = '';
+            cards.forEach(card => {
+                cardsHTML += `
+                    <article class="news-card bg-white rounded-xl shadow-lg p-6 mb-6 fade-in">
+                        <div class="h-48 overflow-hidden rounded-lg mb-4 relative">
+                            <img src="${card.imageUrl}" alt="${card.title}" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 sharing-buttons flex space-x-1">
+                                <button class="edit-btn bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" data-card-id="${card.id}" title="Edit this news card">
+                                    <i class="fas fa-edit text-blue-600"></i>
+                                </button>
+                                <button class="share-btn bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" data-card-id="${card.id}" title="Share this news">
+                                    <i class="fas fa-share-alt text-indigo-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">${card.title}</h3>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-3">
+                            <span>${card.timestamp}</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">${card.metric1}</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">${card.metric2}</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-4">${card.content}</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex items-center space-x-1 text-xs text-gray-500">
+                                <span class="tooltip">
+                                    <i class="fas fa-link mr-1"></i>
+                                    <span class="share-link">${card.shareUrl.substring(0, 25)}...</span>
+                                    <span class="tooltiptext">Click to copy share link</span>
+                                </span>
+                            </div>
+                            <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors">
+                                Copy Link
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 pt-3">
+                            <h4 class="text-sm font-semibold text-gray-600 mb-2">Related Topics</h4>
+                            <div class="flex flex-wrap gap-2">
+                                ${card.topics.map(topic => `<span class="bg-indigo-50 text-indigo-800 text-xs px-2 py-1 rounded-full">${topic}</span>`).join('')}
+                            </div>
+                        </div>
+                    </article>
+                `;
+            });
+            
+            return `
+                <div class="mb-8">
+                    <div class="section-header px-4 py-2 rounded-lg mb-4">
+                        <h3 class="font-bold text-gray-800">Section ${sectionNumber} (${cards.length} card${cards.length !== 1 ? 's' : ''})</h3>
+                    </div>
+                    <div class="grid grid-cols-1 ${cards.length > 1 ? 'md:grid-cols-2' : ''} ${cards.length > 2 ? 'lg:grid-cols-3' : ''} ${cards.length > 3 ? 'xl:grid-cols-4' : ''} gap-6">
+                        ${cardsHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Generate HTML code for a section (for output)
+        function generateSectionCode(cards, sectionNumber) {
+            const dateString = new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: '2-digit', 
+                day: '2-digit' 
+            }).replace(/\//g, '-');
+            
+            const timeString = new Date().toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            });
+            
+            let cardsCode = '';
+            cards.forEach(card => {
+                cardsCode += `
+        <!-- Story: ${card.title} -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="${card.imageUrl}" alt="${card.title}" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(card.shareUrl)}" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(card.shareUrl)}&text=${encodeURIComponent(card.title)}" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=${encodeURIComponent(card.title + ' ' + card.shareUrl)}" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=${encodeURIComponent(card.shareUrl)}&text=${encodeURIComponent(card.title)}" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">${card.title}</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">${card.metric1}</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">${card.metric2}</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">${card.content}</p>
+                <div class="flex items-center justify-between bg-gray-100 p-2 rounded-lg mb-4">
+                    <span class="text-xs text-gray-700 truncate mr-2">${card.shareUrl}</span>
+                    <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors">
+                        Copy Link
+                    </button>
+                </div>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        ${card.topics.map(topic => `<span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">${topic}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        ${card.links.map(link => `<li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="${link}" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> ${new URL(link).hostname}</a></li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        </article>
+                `;
+            });
+            
+            return `
+        <!-- ============================================== -->
+        <!-- SECTION ${sectionNumber}: ${dateString}, ${timeString} GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-${sectionNumber}" class="news-section mb-12">
+            <!-- Date/Time Header ${sectionNumber} (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    ${dateString}, ${timeString} GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group ${sectionNumber} -->
+            <div class="grid articles-grid gap-8">
+                ${cardsCode}
+            </div>
+            <!-- End of Group ${sectionNumber} -->
+        </div>
+            `;
+        }
+
+        // Open sharing modal
+        function openSharingModal(cardId) {
+            currentShareCard = newsCards.find(card => card.id === cardId);
+            if (!currentShareCard) return;
+            
+            shareTitle.textContent = currentShareCard.title;
+            shareUrl.textContent = currentShareCard.shareUrl;
+            sharingModal.classList.remove('hidden');
+        }
+
+        // Close sharing modal
+        function closeSharingModal() {
+            sharingModal.classList.add('hidden');
+            currentShareCard = null;
+        }
+
+        // Copy share URL to clipboard
+        function copyShareUrl() {
+            if (!currentShareCard) return;
+            
+            navigator.clipboard.writeText(currentShareCard.shareUrl).then(() => {
+                showNotification('Share URL copied to clipboard!', 'success');
+            });
+        }
+
+        // Share on specific platform
+        function shareOnPlatform(platform) {
+            if (!currentShareCard) return;
+            
+            let shareUrl = '';
+            const title = encodeURIComponent(currentShareCard.title);
+            const url = encodeURIComponent(currentShareCard.shareUrl);
+            
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${title}%20${url}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${url}&text=${title}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                    break;
+                case 'instagram':
+                    // Instagram doesn't have a direct share URL, so we'll just copy the link
+                    navigator.clipboard.writeText(currentShareCard.shareUrl).then(() => {
+                        showNotification('Link copied for Instagram! Paste it in your Instagram story or post.', 'info');
+                    });
+                    return;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+
+        // Clear all cards
+        function clearAllCards() {
+            if (newsCards.length === 0) return;
+            
+            if (confirm('Are you sure you want to clear all news cards?')) {
+                newsCards = [];
+                sectionCounter = 1;
+                updateOutput();
+                showNotification('All news cards cleared!', 'info');
+            }
+        }
+
+        // Copy code to clipboard
+        function copyCodeToClipboard() {
+            if (newsCards.length === 0) {
+                showNotification('No code to copy! Add some cards first.', 'error');
+                return;
+            }
+            
+            const code = codeOutput.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                showNotification('HTML code copied to clipboard!', 'success');
+            }).catch(err => {
+                showNotification('Failed to copy code: ' + err, 'error');
+            });
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            // Remove existing notification if any
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 max-w-sm transition-all duration-300 transform translate-x-full ${type === 'success' ? 'bg-green-500 text-white' : type === 'error' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`;
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'} mr-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 10);
+            
+            // Animate out and remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

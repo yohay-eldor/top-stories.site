@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceRecurr System - Firebase Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eef1f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        #app {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #auth-button {
+            background-color: #4285F4; /* Google blue */
+        }
+        #auth-button:hover {
+            background-color: #357ae8;
+        }
+        #sign-out-button {
+            background-color: #f44336; /* Red for sign out */
+        }
+        #sign-out-button:hover {
+            background-color: #da190b;
+        }
+        input[type="text"] {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-right: 10px;
+            width: calc(50% - 25px);
+            box-sizing: border-box;
+        }
+        .product-input {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .product-input input {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .product-input button {
+            flex-shrink: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        li strong {
+            color: #2c3e50;
+        }
+        #user-info p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #voice-log-button {
+            width: 100%;
+            background-color: #FFC107; /* Amber for attention */
+            color: #333;
+        }
+        #voice-log-button:hover:not(:disabled) {
+            background-color: #ffb300;
+        }
+        .note {
+            font-style: italic;
+            color: #777;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>🎙️ VoiceRecurr System Demo</h1>
+
+        <section id="auth-section">
+            <h2>Authentication</h2>
+            <div id="user-info">
+                <p>Welcome, <span id="user-display-name">Guest</span>!</p>
+                <div style="text-align: center;">
+                    <button id="auth-button">Sign In with Google</button>
+                    <button id="sign-out-button" style="display: none;">Sign Out</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="products-section" style="display: none;">
+            <h2>Your Recurring Products</h2>
+            <div class="product-input">
+                <input type="text" id="product-name-input" placeholder="Product Name (e.g., Rice)">
+                <input type="text" id="product-macros-input" placeholder="Macros (e.g., 100c/20p/5f)">
+                <button id="add-product-button">Add Product</button>
+            </div>
+            <ul id="product-list">
+                <!-- Products will be listed here -->
+            </ul>
+        </section>
+
+        <section id="voice-log-section" style="display: none;">
+            <h2>Voice Log</h2>
+            <button id="voice-log-button" disabled>🎙️ Start Voice Log</button>
+            <p class="note">*(AI/LLM integration and complex parsing logic would go here. This button is for demonstration.)*</p>
+        </section>
+    </div>
+
+    <script type="module">
+        // Import Firebase modules using the modular SDK from CDN
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        // Your Firebase project configuration
+        // !!! IMPORTANT: Replace with YOUR ACTUAL Firebase project configuration !!!
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "easy-diet-app.firebaseapp.com", // Example based on your Project ID
+            projectId: "easy-diet-app",
+            storageBucket: "easy-diet-app.appspot.com", // Example based on your Project ID
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Get DOM elements
+        const userDisplayName = document.getElementById('user-display-name');
+        const authButton = document.getElementById('auth-button');
+        const signOutButton = document.getElementById('sign-out-button');
+        const productsSection = document.getElementById('products-section');
+        const voiceLogSection = document.getElementById('voice-log-section');
+        const productNameInput = document.getElementById('product-name-input');
+        const productMacrosInput = document.getElementById('product-macros-input');
+        const addProductButton = document.getElementById('add-product-button');
+        const productList = document.getElementById('product-list');
+        const voiceLogButton = document.getElementById('voice-log-button');
+
+        let unsubscribeProducts = null; // To store the Firestore listener unsubscribe function
+
+        // --- Authentication Logic ---
+        const provider = new GoogleAuthProvider();
+
+        authButton.addEventListener('click', async () => {
+            try {
+                await signInWithPopup(auth, provider);
+            } catch (error) {
+                console.error("Error signing in with Google: ", error);
+                alert("Sign-in failed: " + error.message);
+            }
+        });
+
+        signOutButton.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+            } catch (error) {
+                console.error("Error signing out: ", error);
+                alert("Sign-out failed: " + error.message);
+            }
+        });
+
+        // Listen for authentication state changes
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in
+                userDisplayName.textContent = user.displayName || user.email;
+                authButton.style.display = 'none';
+                signOutButton.style.display = 'inline-block';
+                productsSection.style.display = 'block';
+                voiceLogSection.style.display = 'block';
+                voiceLogButton.disabled = false;
+
+                // Start listening to user-specific products
+                const q = query(collection(db, "products"), where("userId", "==", user.uid));
+                unsubscribeProducts = onSnapshot(q, (querySnapshot) => {
+                    productList.innerHTML = ''; // Clear current list
+                    querySnapshot.forEach((doc) => {
+                        const product = doc.data();
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <div>
+                                <strong>${product.name}</strong><br>
+                                <span>Macros: ${product.macros}</span>
+                            </div>
+                        `;
+                        productList.appendChild(listItem);
+                    });
+                }, (error) => {
+                    console.error("Error fetching products: ", error);
+                });
+
+            } else {
+                // User is signed out
+                userDisplayName.textContent = 'Guest';
+                authButton.style.display = 'inline-block';
+                signOutButton.style.display = 'none';
+                productsSection.style.display = 'none';
+                voiceLogSection.style.display = 'none';
+                voiceLogButton.disabled = true;
+                productList.innerHTML = ''; // Clear products list
+
+                // Stop listening to products if a listener was active
+                if (unsubscribeProducts) {
+                    unsubscribeProducts();
+                    unsubscribeProducts = null;
+                }
+            }
+        });
+
+        // --- Firestore Logic for Products ---
+        addProductButton.addEventListener('click', async () => {
+            const productName = productNameInput.value.trim();
+            const productMacros = productMacrosInput.value.trim();
+
+            if (!productName || !productMacros || !auth.currentUser) {
+                alert("Please enter both product name and macros, and make sure you are signed in.");
+                return;
+            }
+
+            try {
+                await addDoc(collection(db, "products"), {
+                    name: productName,
+                    macros: productMacros,
+                    userId: auth.currentUser.uid, // Associate product with the current user
+                    createdAt: new Date()
+                });
+                productNameInput.value = '';
+                productMacrosInput.value = '';
+            } catch (e) {
+                console.error("Error adding document: ", e);
+                alert("Failed to add product. Check console for details.");
+            }
+        });
+
+        // --- Voice Log Placeholder ---
+        voiceLogButton.addEventListener('click', () => {
+            alert("Voice Log initiated! This is where your AI/LLM integration would process speech.");
+        });
+
+    </script>
+</body>
+</html>

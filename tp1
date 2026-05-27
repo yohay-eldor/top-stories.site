@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y97LL6YFMY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y97LL6YFMY');
+  </script>
+  
+  
+    
+       <link rel="canonical" href="https://top-stories.pro/"/>
+    <meta name="description" content="Top Stories provides the top trending news stories from around the world, covering politics, sports, and current events.">
+    <meta name="keywords" content="news, current events, politics, sports, trending, world news, national daughter's day">
+
+
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happening Now</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    
+    <header class="bg-gradient-to-br from-indigo-900 via-rose-700 to-amber-500 text-white p-6 md:p-8 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-1">
+            <span class="inline-block animate-pulse">📰</span> Happening Now
+        </h1>
+        <p class="text-base md:text-lg opacity-90">Top stories from around the world</p>
+    </header>
+
+
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Trending News Feed</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Ensure all articles are initially displayed correctly */
+        .searchable-article {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+            margin-bottom: 0; /* Managed by gap in grid */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Style the date marker for LTR */
+        .date-marker {
+            text-align: left;
+        }
+        /* Grid styling adjustments for better RWD on articles container */
+        .articles-grid {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .articles-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .articles-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mx-auto p-4 md:p-8 lg:p-12">
+        
+        <!-- Search Field (Prominent & Sticky) -->
+        <div class="mb-10 p-4 bg-white rounded-xl shadow-2xl sticky top-0 z-20 border-b-4 border-indigo-400">
+            <input 
+                type="text" 
+                id="article-search" 
+                placeholder="Search news by title, person, or topic (e.g., 'Netflix', 'Football', 'Tesla Pi')..." 
+                class="w-full p-4 text-lg border border-gray-200 rounded-lg shadow-inner focus:ring-4 focus:ring-indigo-300 focus:border-indigo-500 transition duration-200 outline-none text-left"
+            >
+        </div>
+
+
+
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-28-2025, 12:26 GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-28-2025, 12:26 GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: New Story great -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/ColdplayWembley120925-287_-_54787592273_%28cropped%29.jpg" alt="New Story great" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519&text=New%20Story%20great" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=New%20Story%20great%20https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519&text=New%20Story%20great" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">New Story great</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">many many cool stuff</p>
+                
+                <!-- Share Section in Generated Code -->
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-4 mb-4">
+                    <h3 class="text-white font-semibold mb-2 text-sm">Share this story:</h3>
+                    <div class="flex items-center justify-between bg-white p-2 rounded-lg mb-2">
+                        <span class="text-xs text-gray-700 truncate mr-2">https://top-stories.pro/#news-1759051470519</span>
+                        <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors" onclick="copyToClipboard('https://top-stories.pro/#news-1759051470519', 'Share link copied!')">
+                            Copy Link
+                        </button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519" target="_blank" class="bg-white text-blue-600 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519&text=New%20Story%20great" target="_blank" class="bg-white text-blue-400 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-twitter mr-1"></i> Twitter
+                        </a>
+                        <a href="https://wa.me/?text=New%20Story%20great%20https%3A%2F%2Ftop-stories.pro%2F%23news-1759051470519" target="_blank" class="bg-white text-green-500 px-3 py-1 rounded text-xs hover:bg-green-50 transition-colors flex items-center">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">coldplay</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">hotplay</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">justplay</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://en.wikipedia.org/wiki/Coldplay | Wikipedia" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> en.wikipedia.org</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Another great thing -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://www.rollingstone.com/wp-content/uploads/2022/08/oasis-be-here-now.jpg?w=1581&h=1054&crop=1" alt="Another great thing" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533&text=Another%20great%20thing" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Another%20great%20thing%20https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533&text=Another%20great%20thing" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Another great thing</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">many many cool stuff for oasis as well</p>
+                
+                <!-- Share Section in Generated Code -->
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-4 mb-4">
+                    <h3 class="text-white font-semibold mb-2 text-sm">Share this story:</h3>
+                    <div class="flex items-center justify-between bg-white p-2 rounded-lg mb-2">
+                        <span class="text-xs text-gray-700 truncate mr-2">https://top-stories.pro/#news-1759051595533</span>
+                        <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors" onclick="copyToClipboard('https://top-stories.pro/#news-1759051595533', 'Share link copied!')">
+                            Copy Link
+                        </button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533" target="_blank" class="bg-white text-blue-600 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533&text=Another%20great%20thing" target="_blank" class="bg-white text-blue-400 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-twitter mr-1"></i> Twitter
+                        </a>
+                        <a href="https://wa.me/?text=Another%20great%20thing%20https%3A%2F%2Ftop-stories.pro%2F%23news-1759051595533" target="_blank" class="bg-white text-green-500 px-3 py-1 rounded text-xs hover:bg-green-50 transition-colors flex items-center">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">coldplay</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">hotplay</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">justplay</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://en.wikipedia.org/wiki/Coldplay | Wikipedia" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> en.wikipedia.org</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.rollingstone.com/music/music-album-reviews/oasis-be-here-now-1234577170 | Rolling Stones" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.rollingstone.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>
+            
+
+
+
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-28-2025, 11:11 GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-28-2025, 11:11 GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: checking this -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://play-lh.googleusercontent.com/tbn8ETe9MlGM9oBDCUSSRZSRMAPOQludpp-oSNck1nZaanFcJiSRJ3qCnS-07an7U-s" alt="checking this" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=tp1news-1759047022793" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=tp1news-1759047022793&text=checking%20this" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=tp1news-1759047022793" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=about%3Asrcdoc%23news-1759047022793&text=checking%20this" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">checking this</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">somethign about tskskf</p>
+                
+                <!-- Share Section in Generated Code -->
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-4 mb-4">
+                    <h3 class="text-white font-semibold mb-2 text-sm">Share this story:</h3>
+                    <div class="flex items-center justify-between bg-white p-2 rounded-lg mb-2">
+                        <span class="text-xs text-gray-700 truncate mr-2">about:srcdoc#news-1759047022793</span>
+                        <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors" onclick="copyToClipboard('about:srcdoc#news-1759047022793', 'Share link copied!')">
+                            Copy Link
+                        </button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=about%3Asrcdoc%23news-1759047022793" target="_blank" class="bg-white text-blue-600 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=about%3Asrcdoc%23news-1759047022793&text=checking%20this" target="_blank" class="bg-white text-blue-400 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-twitter mr-1"></i> Twitter
+                        </a>
+                        <a href="https://wa.me/?text=checking%20this%20about%3Asrcdoc%23news-1759047022793" target="_blank" class="bg-white text-green-500 px-3 py-1 rounded text-xs hover:bg-green-50 transition-colors flex items-center">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">abdc</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">fexf</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">hleps</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">dlfs</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.bloomberg.com/middleeast | Bloomberg" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.bloomberg.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: new now -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://i.scdn.co/image/ab67616d0000b2735d02af8588949bf7ee2f0a08" alt="new now" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=about%3Asrcdoc%23news-1759047088126" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=about%3Asrcdoc%23news-1759047088126&text=new%20now" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=new%20now%20about%3Asrcdoc%23news-1759047088126" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=about%3Asrcdoc%23news-1759047088126&text=new%20now" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">new now</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">60k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">some more things</p>
+                
+                <!-- Share Section in Generated Code -->
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-4 mb-4">
+                    <h3 class="text-white font-semibold mb-2 text-sm">Share this story:</h3>
+                    <div class="flex items-center justify-between bg-white p-2 rounded-lg mb-2">
+                        <span class="text-xs text-gray-700 truncate mr-2">about:srcdoc#news-1759047088126</span>
+                        <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors" onclick="copyToClipboard('about:srcdoc#news-1759047088126', 'Share link copied!')">
+                            Copy Link
+                        </button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=about%3Asrcdoc%23news-1759047088126" target="_blank" class="bg-white text-blue-600 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url=about%3Asrcdoc%23news-1759047088126&text=new%20now" target="_blank" class="bg-white text-blue-400 px-3 py-1 rounded text-xs hover:bg-blue-50 transition-colors flex items-center">
+                            <i class="fab fa-twitter mr-1"></i> Twitter
+                        </a>
+                        <a href="https://wa.me/?text=new%20now%20about%3Asrcdoc%23news-1759047088126" target="_blank" class="bg-white text-green-500 px-3 py-1 rounded text-xs hover:bg-green-50 transition-colors flex items-center">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">abdc</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">fexf</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">hleps</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">dlfs</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.bloomberg.com/middleeast | Bloomberg" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.bloomberg.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>
+            
+            
+
+
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-28-2025, 09:55 GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-28-2025, 09:55 GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: News 123 -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://media.licdn.com/dms/image/v2/D4E12AQE-yw9bfAByTw/article-cover_image-shrink_720_1280/B4EZYICoDkGYAI-/0/1743891641247?e=2147483647&v=beta&t=zQU6oW_f7bdNsPI3tun7zu9GMfxWWP0wXMOLzeneCIk" alt="News 123" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2Ftp1%3Fnews%3Dnews-123-mg3cbnvx" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2Ftp1%3Fnews%3Dnews-123-mg3cbnvx&text=News%20123" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=News%20123%20https%3A%2F%2Ftop-stories.pro%2Ftp1%3Fnews%3Dnews-123-mg3cbnvx" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=https%3A%2F%2Ftop-stories.pro%2Ftp1%3Fnews%3Dnews-123-mg3cbnvx&text=News%20123" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">News 123</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Just things and save content foe</p>
+                <div class="flex items-center justify-between bg-gray-100 p-2 rounded-lg mb-4">
+                    <span class="text-xs text-gray-700 truncate mr-2">https://top-stories.pro/tp1?news=news-123-mg3cbnvx</span>
+                    <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors">
+                        Copy Link
+                    </button>
+                </div>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">aaa</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">bgf</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">edsw</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">gkes</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">kdl</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.genspark.ai/spark/genspark-sparkpages/4b4e5371-313a-4096-b8e2-8831d032dd41 | Genspark" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.genspark.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Some more news -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden relative">
+                <img src="https://www.allaboutai.com/wp-content/uploads/2025/04/genspark-ai-super-agent-review-blog.webp" alt="Some more news" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                <div class="absolute top-4 right-4 sharing-buttons flex space-x-2 opacity-70 transition-opacity duration-300">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop-stories.pro%2Ftest-page%3Fnews%3Dsome-more-news-mg3cim8d" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftop-stories.pro%2Ftest-page%3Fnews%3Dsome-more-news-mg3cim8d&text=Some%20more%20news" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Twitter">
+                        <i class="fab fa-twitter text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Some%20more%20news%20https%3A%2F%2Ftop-stories.pro%2Ftest-page%3Fnews%3Dsome-more-news-mg3cim8d" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url=https%3A%2F%2Ftop-stories.pro%2Ftest-page%3Fnews%3Dsome-more-news-mg3cim8d&text=Some%20more%20news" target="_blank" class="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors" title="Share on Telegram">
+                        <i class="fab fa-telegram-plane text-blue-500"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Some more news</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Some more things to write</p>
+                <div class="flex items-center justify-between bg-gray-100 p-2 rounded-lg mb-4">
+                    <span class="text-xs text-gray-700 truncate mr-2">https://top-stories.pro/test-page?news=some-more-news-mg3cim8d</span>
+                    <button class="copy-share-link bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs hover:bg-indigo-200 transition-colors">
+                        Copy Link
+                    </button>
+                </div>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">reow</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">flsdls</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">dlsle</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">tpepwd</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">glslsa</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.genspark.ai/spark/genspark-sparkpages/4b4e5371-313a-4096-b8e2-8831d032dd41 | Genspark" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.genspark.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>
+            
+
+
+
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-28-2025, 08:10 GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-28-2025, 05:10 GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: Penn State Vs Oregon - 2025 “White Out” Game -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1719518701287-72bb9b3366ee?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Penn State Vs Oregon - 2025 “White Out” Game" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Penn State Vs Oregon - 2025 “White Out” Game</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>4 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">On September 27, 2025, Penn State hosted Oregon at Beaver Stadium in a White Out primetime game. 
+This was a rematch of their Big Ten title game from the previous season. 
+The game was close and dramatic: Oregon defeated Penn State 30–24 in double overtime. 
+Some critical moments:
+- Penn State mounted a late comeback, tying the game late to force overtime. 
+- In the second overtime, a Drew Allar interception sealed the win for Oregon. 
+- Oregon outgained Penn State in total yards (424 vs. 276). 
+- Oregon’s quarterback Dante Moore threw for ~248 yards and three touchdowns. 
+- Penn State’s Allar had a more modest stat line (137 passing yards, 2 TDs) but the late interception was a costly mistake. 
+After that game, Penn State’s record dropped to 3–1 for the season. 
+From analyses and commentary, the game seemed to underscore familiar narratives about Penn State: strong effort, promising comebacks, but vulnerability under pressure in critical moments.</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Penn State</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Dante Moore</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Oregon Ducks</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.usatoday.com/story/sports/ncaaf/bigten/2025/09/27/penn-state-football-rankings-oregon-loss-top-25/86400880007" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> USA Today</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://sports.yahoo.com/college-football/breaking-news/article/no-6-oregon-stuns-no-3-penn-state-with-walk-off-interception-in-double-overtime-032242602.html" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> sports.yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Kentucky Vs South Carolina -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://plus.unsplash.com/premium_photo-1664304634915-36c858c860bf?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kentucky Vs South Carolina" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Kentucky Vs South Carolina</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>3 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">In their latest encounter (today’s game), South Carolina beat Kentucky 35 13. 
+Key points from that game:
+  • Kentucky started strong—took a 10 7 lead in Q1. 
+  • Then South Carolina had big swing plays—defensive scores: a sack fumble and a pick six that shifted momentum. 
+  • Kentucky’s offense struggled after that, especially in the second half. 
+  • A bright spot: running back Seth McGowan averaged over 90 yards and had a solid performance. 
+</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">American Football</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://ukathletics.com/news/2025/09/26/big-blue-preview-kentucky-at-south-carolina-3" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> ukathletics.com</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.wyff4.com/article/sports-entertainment-defense-guides-south-carolina-to-big-win-over-kentucky/68096621" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.wyff4.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Sporting KC Vs LA Galaxy -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1728034867407-8f325091fc7c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sporting KC Vs LA Galaxy" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Sporting KC Vs LA Galaxy</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Both teams are already eliminated from playoff contention as of that date.
+Sporting KC had just been knocked out of postseason hopes after a 2 0 loss to Vancouver.
+Galaxy are in a very weak position: last place in the Western Conference, with one of the worst defensive records in MLS.
+Sporting KC has been showing some grit despite a rough season. They’ve earned a number of points from coming back in matches (wins/draws while trailing).
+LA Galaxy have been struggling especially in tight games, and giving up goals late has been a recurring problem. </p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Sporting KC</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">LA Galaxy</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Dejan Joveljić</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.sportingkc.com/news/sports-medicine-report-sporting-faces-off-against-galaxy-out-in-la-sept-27-2025" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.sportingkc.com</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.lagalaxy.com/news/season-ticket-member-of-the-match-vs-sporting-kansas-city-jeremy-price-september-27-2025" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.lagalaxy.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>
+            
+
+
+
+
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-28-2025, 10:09PM GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-27-2025, 10:09PM GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: 2025 AFL Grand Final & Snoop Dogg -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1735838465878-1d057637442a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="2025 AFL Grand Final & Snoop Dogg" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">2025 AFL Grand Final & Snoop Dogg</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>7 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">In the lead up to the 2025 AFL Grand Final, one of the big trending topics is the involvement of Snoop Dogg. He is confirmed as one of the performers during the pre match entertainment at the Melbourne Cricket Ground. Australian (and wider international) interest appears to stem from the unusual pairing: an American hip hop star performing at an Australian sports final that is less well known outside Australia. Media coverage highlights Snoop’s quotes about learning to understand the game, expressing that he’s “in love” with Australian Rules Football. There are also some controversies: past uses of homophobic slurs in his lyrics are being raised by critics, and there have been questions about whether his inclusion is appropriate for this kind of sporting event. 
+So in Austria, the interest is a mix of curiosity about the spectacle, cross cultural novelty, and also ethics/cultural fit.</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Melbourne Cricket</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Snoop Dogg</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">AFL</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.news.com.au/sport/afl/snoop-dogg-article-deleted-as-afl-call-clear-on-grand-final-act/news-story/48c892be5a92c673a482706b1f133cd3" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.news.com.au</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.deutschetageszeitung.de/en/Culture/707546-snoop-dogg-in-love-with-australian-rules-football.html" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.deutschetageszeitung.de</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: AFL Grand Final 2025 Score -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517137879134-48acfbe3be13?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AFL Grand Final 2025 Score" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">AFL Grand Final 2025 Score</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>5 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">place on 27 September at the Melbourne Cricket Ground, between Geelong Football Club and Brisbane Lions. Brisbane won decisively. The final scores were:
+•	Geelong: 11.9 (75)
+•	Brisbane Lions: 18.14 (122)
+The margin was 47 points in favour of Brisbane. This was their second consecutive premiership win, and their 5th overall. The Norm Smith Medal (best on ground) was awarded to Will Ashcroft for his strong all around game.
+For Austria, people seem to be searching this to get closure: what was the result, who played, and how definitive the win was. Probably due to time zone differences, many learned the result after waking up; hence searches spike.</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">AFL Finals</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Sports in Australia</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Will Ashcroft</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://en.wikipedia.org/wiki/2025_AFL_Grand_Final" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> en.wikipedia.org</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.youtube.com/watch?v=CmQP7nG2t4M" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.youtube.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Will Ashcroft -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1480099225005-2513c8947aec?q=80&w=1303&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Will Ashcroft" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Will Ashcroft</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">120k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">500%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Will Ashcroft. He played a standout performance in the 2025 AFL Grand Final and won the Norm Smith Medal, which goes to the player judged best on ground in the Grand Final. 
+ At only 19‑20 years old (depending on birthday), this makes him one of the youngest ever to win the award, especially having won it in back‑to‑back years (2024 and 2025).  In the 2025 Grand Final, his stats included 32 disposals, 10 clearances, 10 score involvements, and he also kicked a goal in the final quarter. 
+ This level of all‑round contribution (defensive work, attacking involvement, scoring) is driving attention.
+
+In Austria there’s interest in who the star of the game was. Since many people are unfamiliar with AFL or its awards, knowing Will Ashcroft helps make sense of discussions: why people are talking about him, why he’s getting praise, etc.</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Rugby</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Melbourne</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">AFL 2025</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://en.wikipedia.org/wiki/Will_Ashcroft|Wikipedia" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> en.wikipedia.org</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.lions.com.au/players/5518/will-ashcroft" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.lions.com.au</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.instagram.com/willashcroft3" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.instagram.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>
+            
+
+      <!-- ============================================== -->
+        <!-- SECTION 1: 09-27-2025, 20:01 GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-27-2025, 08:00PM GMT
+                </mark>
+            </p>
+
+            <!-- Articles Group 1 -->
+            <div class="grid articles-grid gap-8">
+                
+        <!-- Story: Makena White -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1723394834156-cc7b10494a85?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Makena White" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Makena White</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Makena White, aged 28, was the girlfriend of PGA Tour golfer Jake Knapp. Her death was reported recently (September-2025), and was confirmed via a heartfelt announcement on her Instagram. 
+Her final social media posts paid tribute to Knapp and their relationship. 
+The cause of her death has not been publicly disclosed.
+Jake Knapp has since issued a statement describing the reality of her passing as difficult to comprehend, and expressed grief and respect for her memory. 
+</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Heart Failure</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Jake Knapp</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">cause of her death</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://people.com/makena-white-girlfriend-pga-golfer-jake-knapp-dies-age-28-11819720" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> people.com</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://nypost.com/2025/09/27/sports/pga-tour-golf-star-jake-knapp-breaks-silence-on-girlfriend-makena-whites-death-at-28" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> nypost.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Atlético Madrid – Real Madrid (Derby / Recent Context) -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Atlético Madrid – Real Madrid (Derby / Recent Context)" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Atlético Madrid – Real Madrid (Derby / Recent Context)</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">250%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">The Madrid derby between Atlético Madrid and Real Madrid is always one of the biggest fixtures in Spanish football. In 2025, this matchup continues to carry high intensity given both clubs’ ambitions in La Liga and European competitions.
+Currently, Atlético are facing squad and form challenges, including integrating many new players this season, while Real Madrid under coach Xabi Alonso have been in strong form.
+
+<p>Ahead of the derby, Atlético’s coach Diego Simeone emphasized mental strength and resilience, especially given a tight fixture schedule and limited rest for the players.
+In their most recent La-Liga derby, Atlético won 4–2 against Real Madrid.
+Earlier in the season, Atlético opted for a light training session before the derby to preserve energy for their key players.
+Historically, Atlético and Real have frequently met in knockout ties that go into extra time, adding drama to their rivalries.
+</p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">European Soccer</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Real Madrid</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.reuters.com/sports/soccer/atletico-preparing-huge-effort-with-less-rest-madrid-derby-simeone-says-2025-09-26" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.reuters.com</a></li><li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.reddit.com/r/soccer/comments/19a2xgl/all_8_most_recent_atletico_vs_real_madrid" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> www.reddit.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+        <!-- Story: Google’s 27th Birthday -->
+        <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+            <div class="h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1592096304832-62463bfdc822?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Google’s 27th Birthday" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+            </div>
+            <div class="p-6 article-content">
+                <h2 class="text-xl font-bold mb-2 text-indigo-900">Google’s 27th Birthday</h2>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>2 hours ago</span>
+                    <span class="inline-flex items-center text-green-600 font-semibold">
+                        <span class="text-lg mr-1">✔</span> Active
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">80k</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">330%</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">On September-27, 2025, Google celebrates its 27th birthday. 
+The company marked the occasion with special nods to its history, including restoring its original 1998 logo in a homepage doodle. 
+Over the years, Google has evolved far beyond a search engine, expanding into areas such as advertising, mobile OS (Android), cloud computing, artificial intelligence, hardware, and more. 
+An interesting highlight: the design of Google’s iconic logo was created by Ruth Kedar, an Israeli-American designer. On this anniversary, her role has been spotlighted in several retrospectives. 
+To celebrate, Google also ran some promotional deals on Pixel devices and related hardware. </p>
+                <div class="border-t border-slate-200 pt-4 mt-4">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                    <div class="flex flex-wrap gap-2 related-topics">
+                        <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Happy Birthday Google</span><span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Ruth Kedar</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                    <ul class="space-y-1">
+                        <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://economictimes.indiatimes.com/news/international/global-trends/googles-27th-birthday-the-impressive-story-of-ruth-kedar-the-brain-behind-tech-giants-iconic-logo/articleshow/124183171.cms" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> economictimes.indiatimes.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+                
+            </div>
+            <!-- End of Group 1 -->
+        </div>        
+        <!-- ============================================== -->
+        <!-- SECTION 1: 09-26-2025, 01:15PM GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-26-2025, 01:15PM GMT
+                </mark>
+            </p>
+
+            <!-- Articles Triplet 1 -->
+            <div class="grid articles-grid gap-8">
+                
+                <!-- Story 1: Devone (Devon) Pritchard -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nintendo Switch" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">Devone (Devon) Pritchard</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>2 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <!-- Adjusted space-x-reverse to standard space-x for LTR -->
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">70K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+120%</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4">On September 25, 2025, Nintendo announced that Doug Bowser, President and COO of Nintendo of America, will retire on December 31, 2025. His successor will be Devone Pritchard.</p>
+                        <p class="text-sm leading-relaxed mb-4">Pritchard, a 19-year veteran of the video game industry, will also hold a position on the Nintendo of America board of directors. This is a very senior role and will make her the first woman in this position.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Nintendo</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">COO</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Doug Bowser</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://nintendowire.com/news/2025/09/25/nintendo-of-america-president-doug-bowser-to-retire-devon-pritchard-named-successor" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Nintendo Wire</a></li>
+                                                       <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://gonintendo.com/contents/53302-doug-bowser-retiring-from-nintendo-at-the-end-of-2025-being-replaced-by-devon" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Go Ninentdo</a></li>
+                            <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.nintendo-insider.com/doug-bowser-to-leave-nintendo-of-america" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Nintendo Insider</a></li>
+                        </ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 2: Voddie Baucham -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://plus.unsplash.com/premium_photo-1718349374495-b1d09644f973?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Heart Failure">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">Voddie Baucham</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>15 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">200K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+1000%</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4">On September 25, 2025, it was announced that Voddie Baucham Jr., a pastor and theologian, passed away at the age of 56 following an emergency medical incident. Baucham suffered from heart failure.</p>
+                        <p class="text-sm leading-relaxed mb-4">Earlier this year, a crowdfunding campaign raised over $1 million for his medical expenses. Before his death, he was planning to move from Zambia to the United States.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Heart Failure</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Zambia and the US</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Charlie Kirk</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                            <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://en.wikipedia.org/wiki/Voddie_Baucham" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Wikipedia</a></li>
+
+                           <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.christianpost.com/news/voddie-baucham-dies-at-56-after-emergency-medical-incident.html" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Christian Post</a></li>
+                            <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.usatoday.com/story/news/nation/2025/09/26/voddie-baucham-jr-pastor-death/86363988007/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>USA Today</a></li>
+ 
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 3: Melbourne Storm -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1558151507-c1aa3d917dbb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rugby Game">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">Melbourne Storm</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>4 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">100K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+900%</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4">On September 26, 2025, the Melbourne Storm defeated the Cronulla Sharks 22–14 in the NRL Preliminary Final, securing a place in the Grand Final. Key players, such as Jahrome Hughes, returned from injury and performed well.</p>
+                        <p class="text-sm leading-relaxed mb-4">Earlier in the season, the team signed Moses Leo, an All Blacks Sevens representative, to a two-year deal starting in 2026.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Ryan Papenhuyzen</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Moses Leo</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Jahrome Hughes</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://nrl.com" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> NRL Official</a></li>
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.melbournestorm.com.au/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Melbourne Storm</a></li>
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.foxsports.com.au/nrl/nrl-premiership/nrl-2025-craig-bellamy-press-conference-harry-grant-melbourne-storm-vs-cronulla-sharks-preliminary-final/news-story/f9153d77736bde5480e89f15989b8b79" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Fox Sports</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div> 
+            <!-- End of Triplet 1 -->
+        </div>
+        
+        <!-- ============================================== -->
+        <!-- SECTION 2: 09-26-2025, 05:15AM GMT -->
+        <!-- ============================================== -->
+
+        <div id="section-2" class="news-section mb-12 mt-12">
+            <!-- Date/Time Header 2 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-26-2025, 05:15AM GMT
+                </mark>
+            </p>
+
+            <!-- Articles Triplet 2 -->
+            <div class="grid articles-grid gap-8">
+
+                <!-- Story 4: Billy Vigar Passed Away (New Set) -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <!-- Added image transition -->
+                        <img src="https://i.imgur.com/D2VfNlA.png" alt="Football Court" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">Billy Vigar Passed Away</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>4 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">10K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+80%</span>
+                        </div>
+                        <!-- Applied consistent paragraph styling -->
+                        <p class="text-sm leading-relaxed mb-4">Billy Vigar, 21, has passed away after sustaining a severe head injury during a football match. Vigar, a former Arsenal academy player, underwent surgery but did not recover.</p>
+                        <p class="text-sm leading-relaxed mb-4">The injury occurred during a game between his club Chichester City and Wingate & Finchley. The match was abandoned following the incident.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Billy Vigar</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">British Soccer</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Brain Injury</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.espn.com/soccer/story/_/id/46379305/arsenal-youth-billy-vigar-dies-brain-injury-chichester-city" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> ESPN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 5: Tesla Pi Phone (New Set) -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mobile Phone">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">Tesla Pi Phone</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>15 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">20K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+150%</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4">
+                            The "Tesla Pi Phone" remains largely within the realm of rumors and speculation. Currently, there is no confirmed official announcement or finished product from Tesla or Elon Musk.
+                            Some of the rumored features include:
+                        </p>
+                        <!-- Updated list for LTR -->
+                        <ul class="list-disc list-inside text-sm leading-relaxed mb-4 pl-4 text-gray-700 space-y-1">
+                            <li>Starlink connectivity / Satellite internet</li>
+                            <li>Solar charging capabilities</li>
+                            <li>Possible integration with the Tesla ecosystem (cars, energy)</li>
+                        </ul>
+                        <p class="text-sm leading-relaxed mb-4">However, all of these remain unverified.</p>
+                        <p class="text-sm leading-relaxed mb-4">A fact check published by Yahoo Tech states that claims about a "Pi Phone" release with free Starlink access are inaccurate—Tesla has made no such announcement.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Elon Musk</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Mobile Phone</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Unconfirmed</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://tech.yahoo.com/phones/articles/fact-check-tesla-didnt-release-231000822.html?utm_source=chatgpt.com&guccounter=1&guce_referrer=aHR0cHM6Ly9jaGF0Z3B0LmNvbS8&guce_referrer_sig=AQAAAIu_FHbfc_pBE41BblKrCX1UukH40HtYT9pWdS2KyopoYAP5hIlNEZmJWXjHYVafRNMGT79uQWYfoxK_1Lm0EbrfUafGLG5iKql6plAEnHgn6BW07niPE6YPxwLm-QNU71SbLjWjwA8levBSGD7-eMOHK5galQIDBCYNvpLFxzB6" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>Yahoo Tech</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story 6: House of Guinness (New Set) -->
+                <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Brewery">
+                    </div>
+                    <div class="p-6 article-content">
+                        <h2 class="text-xl font-bold mb-2 text-indigo-900">House of Guinness</h2>
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <span>3 hours ago</span>
+                            <span class="inline-flex items-center text-green-600 font-semibold">
+                                <span class="text-lg mr-1">✔</span> Active
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">20K+</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+500%</span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-4">"House of Guinness" is a new historical drama series by Netflix created by Steven Knight (who created "Peaky Blinders"). The series is set to premiere on September 25, 2025.</p>
+                        <p class="text-sm leading-relaxed mb-4">The plot centers on the events following the death of Sir Benjamin Guinness and the power struggles, inheritance, and character conflicts among his four children (Arthur, Edward, Anne, and Ben).</p>
+                        <p class="text-sm leading-relaxed mb-4">Netflix made "House of Guinness" the first content on its platform to support Irish language subtitles as an homage to the story's roots.</p>
+                        
+                        <div class="border-t border-slate-200 pt-4 mt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                            <div class="flex flex-wrap gap-2 related-topics">
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Netflix Series</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">House of Guinness</span>
+                                <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">September 2025</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                            <ul class="space-y-1">
+                                <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.imdb.com/title/tt13542714/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span>IMDB</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div> 
+            <!-- End of Triplet 2 -->
+        </div> 
+        <!-- End of #articles-container (Grid) -->
+
+       <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-25-2025, 09:15PM GMT
+                </mark>
+            </p>
+
+
+
+<!-- Articles Triplet 2 -->
+<div class="grid articles-grid gap-8">
+    
+    <!-- Story 1: Real Oviedo vs Barcelona -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1522778590545-a5a925dcf6f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Real Madrid">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Real Oviedo vs Barcelona</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>4 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+900%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">In a La Liga match played today, Real Oviedo stunned FC Barcelona with a 1–0 victory. Alberto Reina scored in the 33rd minute from long range.</p>
+            <p class="text-sm leading-relaxed mb-4">Barcelona are dealing with a slew of injury problems: their star midfielder Gavi is out for 4–5 months after knee surgery.</p>
+            <p class="text-sm leading-relaxed mb-4">Ahead of the match, Barcelona coach Hansi Flick criticized Spain's national team management over the handling of Lamine Yamal's injury. Spain coach Luis de la Fuente responded by saying he was "not interested" in the criticism.</p>
+            <p class="text-sm leading-relaxed mb-4">The matchday squad for Barcelona had several absentees: besides Gavi, they were missing Fermín López, Lamine Yamal, Ter Stegen, Alejandro Balde among others.</p>
+            <p class="text-sm leading-relaxed mb-4">Barcelona's financial constraints also received attention recently: their salary limit was reduced by La Liga regulators from ~€463 million to ~€351 million for the 2025/26 season.</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Real Oviedo</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">FC Barcelona</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Alejandro Balde</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.skysports.com/football/real-oviedo-vs-barcelona/live/536021" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Sky Sports</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.barcablaugranes.com/barcelona-la-liga/101983/not-interested-spain-boss-luis-de-la-fuente-responds-to-hansi-flicks-criticism-after-lamine-yamal-injury" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Barca Blaugranes</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.reuters.com/sports/soccer/barcas-gavi-sidelined-up-five-months-after-knee-surgery-2025-09-24" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Reuters</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Story 2: Iron Hill Brewery Closures -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Iron Hill Closures">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Iron Hill Brewery Closures</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>15 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">20K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+150%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">Iron Hill Brewery & Restaurant, a chain known for its brewpubs in Pennsylvania, Delaware, New Jersey, Georgia, and the surrounding region, abruptly shut down all 16 of its locations and filed for bankruptcy.</p>
+            <p class="text-sm leading-relaxed mb-4">The company posted on Facebook/Instagram that the decision was forced by "ongoing financial challenges," thanking customers and expressing a hope to return in the future.</p>
+            <p class="text-sm leading-relaxed mb-4">This closure follows earlier shutdowns of some locations (e.g. in Chestnut Hill, Voorhees, Newark) which had left the chain with 16 operating sites before the final closures.</p>
+            <p class="text-sm leading-relaxed mb-4">The sudden nature of the closures—employees reportedly informed via internal messaging systems—has drawn attention to how precarious restaurant operations remain under cost pressures (labor, supply chain, rents, etc.).</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Major Shutdown</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Unemployment</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Chestnut Hill</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.inquirer.com/food/restaurants/iron-hill-brewery-pennsylvania-closing-all-locations-20250925.html" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Inquirer</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.the-sun.com/money/15248906/iron-hill-brewery-close-restaurants-bankruptcy" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> The Sun</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.today.com/food/iron-hill-brewery-closures-rcna233699" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Today</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Story 3: National's Daughter's day -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://plus.unsplash.com/premium_photo-1683133390963-8d8fe05aebcb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="National's Daughter's day">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">National Daughter's day all over the US</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>3 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">80K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+1200%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">The 2025 Global Citizen Festival in Central Park is making headlines: Cardi B has replaced The Weeknd as one of the headliners.</p>
+            <p class="text-sm leading-relaxed mb-4">Also in New York, tonight there are several concerts and cultural events:</p>
+            <p class="text-sm leading-relaxed mb-4">► Nate Bargatze: Big Dumb Eyes Tour at Madison Square Garden.</p>
+            <p class="text-sm leading-relaxed mb-4">► "Los Ángeles Azules EN VIVO" at The Theater at MSG.</p>
+            <p class="text-sm leading-relaxed mb-4">► The Metropolitan Opera is staging Don Giovanni at Lincoln Center.</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">National Daughter's Day in NY</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">National Daughter's Day in LA</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">+1 more</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://pitchfork.com/news/cardi-b-to-replace-the-weeknd-at-global-citizen-festival-2025/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Pitchfork</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://economictimes.indiatimes.com/news/international/us/national-daughters-day-2025-wishes-celebrate-your-daughters-with-heartfelt-messages-and-quotes-celebration-in-united-states-september-25-why-is-it-celebrated-importance/articleshow/124130423.cms" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Economist India times</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://nationaltoday.com/national-daughters-day/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> National Today</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+</div>
+<!-- End of Triplet 2 -->
+
+      <div id="section-1" class="news-section mb-12">
+            <!-- Date/Time Header 1 (Highlighted Yellow) -->
+            <p class="date-marker text-xl font-mono text-gray-700 mb-6 px-2">
+                <mark class="bg-yellow-200 text-gray-900 px-3 py-1 rounded-md font-extrabold shadow-sm inline-block">
+                    09-25-2025, 12:00PM GMT
+                </mark>
+            </p>
+
+
+
+
+<!-- Articles Triplet 3 -->
+<div class="grid articles-grid gap-8">
+    
+    <!-- Story 1: James Comey -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1603119761708-9252f043c139?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="James Comey">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">James Comey Faces Legal Scrutiny</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>15 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">50K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+900%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">Recently, U.S. prosecutors are reported to be preparing to indict Comey in the Eastern District of Virginia, possibly as soon as within days. The charge is likely to be making false statements to Congress during his September 2020 testimony concerning the FBI's "Crossfire Hurricane" investigation into alleged ties between the Trump campaign and Russia.</p>
+            <p class="text-sm leading-relaxed mb-4">A key factor pushing this forward is a looming statute of limitations deadline, which reportedly expires next week. The case is controversial and potentially politically charged.</p>
+            <p class="text-sm leading-relaxed mb-4">When a prior U.S. attorney (Erik Siebert) resisted bringing charges due to insufficient evidence, he was replaced, and Comey's critics argue the move indicates undue political influence over the Justice Department. Some internal prosecutors have reportedly expressed doubts about the strength of evidence.</p>
+            <p class="text-sm leading-relaxed mb-4">If an indictment is filed and sustained, Comey would become one of the highest-ranking former U.S. officials ever criminally charged. Politically, it heightens concerns about the Justice Department's independence and whether prosecutorial decisions are being weaponized in partisan conflicts.</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Comey Indictment</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">James Comey Investigation</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">+1 more</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.reuters.com/world/us/former-fbi-director-comey-be-indicted-virginia-soon-msnbc-reports-2025-09-24" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Reuters Legal News</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.washingtonpost.com/national-security/2025/09/24/justice-virginia-prosecutors-james-comey" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Washington Post</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.washingtonpost.com/politics/2025/09/24/trump-fbi-james-comey-indictment-bondi-doj/19cbe148-99a6-11f0-8ce3-5abc3053a693_story.html" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Washington Post</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Story 2: Ryan Walters -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1622927569053-d7896a1e9c80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Education policy">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Ryan Walters Makes Education Policy Announcement</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>14 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">10K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+500%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">Oklahoma Superintendent of Public Instruction Ryan Walters has announced significant new education policies that are generating discussion across the state.</p>
+            <p class="text-sm leading-relaxed mb-4">In mid 2025, board members alleged that during a private meeting, Walters displayed nude images on a television in his office. Walters denied the accusations, insisting the claims were lies and part of a coordinated attempt to discredit him.</p>
+            <p class="text-sm leading-relaxed mb-4">The Oklahoma County Sheriff and the State Bureau of Investigation are involved; the investigation is still ongoing and not yet concluded. Official review of the television hardware showed that the TV had streaming, antenna, and cable capabilities.</p>
+            <p class="text-sm leading-relaxed mb-4">The Oklahoma Management & Enterprise Services (OMES) noted that the board's acting secretary observed before the meeting that the TV was tuned to Fox News. Some legal and ethics complaints have also been filed: Walters is under an ethics probe for alleged violations of campaign finance and using state agency communications for political messaging.</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Education Policy</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Oklahoma Education</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">State Superintendent</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.newson6.com/story/68c886496cc1fbf3b500f31c/oklahoma-supreme-court-issues-stay-on-new-social-studies-standards" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> News 6</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.thedailybeast.com/oklahoma-maga-school-boss-ryan-walters-quits-to-lead-new-conservative-battle" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> The Daily Beast</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Story 3: Cal Raleigh -->
+    <article class="searchable-article news-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+        <div class="h-56 overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" src="https://images.unsplash.com/photo-1516731415730-0c607149933a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="MLB">
+        </div>
+        <div class="p-6 article-content">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Cal Raleigh</h2>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>10 hours ago</span>
+                <span class="inline-flex items-center text-green-600 font-semibold">
+                    <span class="text-lg mr-1">✔</span> Active
+                </span>
+            </div>
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">500K+</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full font-semibold">+1.000%</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-4">Cal Raleigh, catcher for the Seattle Mariners, is having a historic 2025 season in Major League Baseball. In the latest game, he hit two home runs, reaching 60 homers for the season and helping the Mariners clinch the American League West title.</p>
+            <p class="text-sm leading-relaxed mb-4">He is the first catcher ever to reach 60 home runs in a season and only the seventh player overall to do so. Over the course of 2025, Raleigh has broken multiple records. He surpassed Ken Griffey Jr.'s franchise home run record for the Mariners.</p>
+            <p class="text-sm leading-relaxed mb-4">He also broke Salvador Pérez's record for most homers in a season by a catcher (48). As a switch hitter, he also eclipsed Mickey Mantle's single-season record of 54 homers by a switch hitter.</p>
+            <p class="text-sm leading-relaxed mb-4">Raleigh's power surge has attracted comparisons with all-time greats, and he is a strong candidate for the MVP award. Analysts have noted that his pace puts him in rare company: only a handful of players in MLB history have reached 60 home runs.</p>
+            
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Related Topics</h3>
+                <div class="flex flex-wrap gap-2 related-topics">
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">MLB</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Catchers MLB History</span>
+                    <span class="bg-indigo-50 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">Seattle Mariners</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="text-sm font-semibold text-slate-500 mb-2">Read More</h3>
+                <ul class="space-y-1">
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.reuters.com/sports/baseball/cal-raleigh-reaches-60-hrs-mariners-clinch-al-west-title--flm-2025-09-25/" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> Reuters</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://www.mlb.com/stories/cal-raleigh-home-runs-2025" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> mlb.com</a></li>
+                    <li><a class="text-indigo-700 hover:text-rose-700 hover:underline transition-colors duration-200 text-sm flex items-center" href="https://apnews.com/article/cal-raleigh-home-run-mariners-2f9405b191442e8e8aaface1b42f787e" target="_blank" rel="noopener noreferrer"><span class="mr-1">→</span> AP News</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+</div>
+<!-- End of Triplet 3 -->
+
+
+
+    </div> 
+    <!-- End of .container -->
+  
+     <!-- This footer now looks much better and still takes up the full width -->
+ <footer class="w-full bg-slate-900 text-white text-center py-6 mt-12 shadow-inner">
+    <p class="text-sm opacity-80">
+        Happening Now 2025 | provided by
+        <a href="https://top-stories.pro" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="font-semibold text-amber-500 hover:text-rose-500 transition-colors duration-200">
+            top-stories.pro
+        </a>
+    </p>
+</footer>
+ 
+  
+  
+  
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('article-search');
+            
+            // Function to filter articles based on search term
+            const filterArticles = (searchTerm) => {
+                const term = searchTerm.toLowerCase().trim();
+                
+                // Select all articles marked as searchable
+                const allArticles = document.querySelectorAll('.searchable-article');
+                
+                // Select all date markers (to hide them if no articles are visible in their section)
+                const dateMarkers = document.querySelectorAll('.date-marker');
+
+                // Keep track of which news sections should remain visible
+                const visibleSections = new Set();
+                
+                allArticles.forEach(card => {
+                    const articleTitle = card.querySelector('h2').textContent.toLowerCase();
+                    const articleContent = card.querySelector('.article-content').textContent.toLowerCase();
+
+                    // Find the parent section ID for checking visibility later
+                    const sectionId = card.closest('.news-section').id;
+
+                    if (articleTitle.includes(term) || articleContent.includes(term)) {
+                        card.style.display = 'block'; // Show article
+                        visibleSections.add(sectionId);
+                    } else {
+                        card.style.display = 'none'; // Hide article
+                    }
+
+                // Control visibility of entire news sections based on visible articles within them
+                document.querySelectorAll('.news-section').forEach(section => {
+                    if (visibleSections.has(section.id) || term === '') {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+
+
+                // If the search term is empty, ensure all cards and sections are visible
+                if (term === '') {
+                    allArticles.forEach(card => card.style.display = 'block');
+                    document.querySelectorAll('.news-section').forEach(section => section.style.display = 'block');
+                }
+            };
+
+            // Event listener for the search input
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    filterArticles(e.target.value);
+                });
+            }
+            
+            // Initial call to ensure correct display on load
+            filterArticles('');
+        });
+    </script>
+</body>
+</html>
